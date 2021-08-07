@@ -1,0 +1,77 @@
+<html>
+
+<head>
+  <title> Login Form</title>
+  <script>
+    function validate()
+    {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var loginlist = { "User": {
+                                "userlist":[{
+    "id": "1",
+    "firstName": "Animesh",
+    "lastName": "Roy",
+    "email": "ani@gmail.com",
+    "age": 21,
+    "companyId": "1"
+  },
+  {
+    "id": "2",
+    "firstName": "Rahul",
+    "lastName": "Sharma",
+    "email": "rahul@gmail.com",
+    "age": 20,
+    "companyId": "1"
+  },
+  {
+    "id": "3",
+    "firstName": "Mark",
+    "lastName": "Tyson",
+    "email": "lipon21@gmail.com",
+    "age": 22,
+    "companyId": "1"
+  },
+  {
+    "id": "4",
+    "firstName": "Saurav",
+    "lastName": "Kumar",
+    "email": "saurav@gmail.com",
+    "age": 24,
+    "companyId": "1"
+  }]
+                            }
+                               
+        };
+        var logged = false;
+        if(loginlist[0].User.userlist.id === 1 || loginlist[0].User.userlist.id === 2 || loginlist[0].User.userlist.id === 3 || loginlist[0].User.userlist.id === 4){
+            for(var i =0; i < loginlist[0].User.userlist.length; i++){
+                if(username == loginlist[0].User.userlist[i].username && password == loginlist[0].User.userlist[i].password){
+                    logged= true;
+                }
+            }
+            if(logged)
+            alert("User login");
+
+            else
+            alert("User login fail");               
+
+          }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="main">
+      <h2>Login Form</h2>
+      <form id="form_id" method="post" name="myform">
+        <label>User Name :</label>
+        <input type="text" placeholder="Enter username" name="username" id="username"/>
+        <label>Password :</label>
+        <input type="password" placeholder="Enter Password" name="password" id="password"/>
+        <input type="button" value="Login" id="submit" onclick="validate()" ng-click = "LoginButton";/>
+      </form>
+</body>
+
+</html>

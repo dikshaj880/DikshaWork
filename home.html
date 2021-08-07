@@ -1,0 +1,30 @@
+<div class="col-md-12" style="width:500px;">
+  <div align="right"><a ui-sref="login">Logout</a></div>
+  <h4>Welcome {{user}}! </h4>
+
+
+  <label for="Companies"> Companies: </label><br>
+  <select name="Companies" ng-model="data.Companies">
+    <option value="option-1">Apple</option>
+    <option value="option-2">Microsoft</option>
+    <option value="option-1">Google</option>
+  </select><br>
+
+
+
+  <div>
+    <label>Name</label>: <input ng-model="data.name">
+  </div>
+  <div>
+    <label>Phone Number</label>: <input ng-model="data.Phone">
+  </div>
+  <div>
+    <label>Country</label>: <input ng-model="data.Country">
+  </div>
+  <div>
+    <label>Companies</label>: <input ng-model="data.Companies">
+  </div>
+  <input type="submit" value="Submit" ng-click="add">
+
+
+</div>
